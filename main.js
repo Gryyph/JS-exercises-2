@@ -5,7 +5,7 @@ function titleize(arr, func){
 }
 
 function printCallback(arr) {
-  console.log(arr);
+  //console.log(arr);
   arr.forEach(name => console.log(name)); 
   };
 
