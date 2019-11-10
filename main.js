@@ -42,3 +42,5 @@ Elephant.prototype.play = function() {
 
 
 let ellie = new Elephant("Ellie", 185, ["giving human friends a ride", "playing hide and seek"]);
+
+ellie.trumpet;
