@@ -35,12 +35,19 @@ Elephant.prototype.addTrick = function(trick) {
 };
 
 Elephant.prototype.play = function() {
-    var i = Math.floor(Math.random() * Math.floor(this.height.length));
+    var i = Math.floor(Math.random() * Math.floor(this.tricks.length));
     console.log(`${this.name} is ${this.tricks[i]}`);
   };
 
+// invocation
+Elephant.paradehelper()  = function(elephant_object) {
+  console.log(`${elephant_object.name} is in the parade!`);
+
+}
 
 
 let ellie = new Elephant("Ellie", 185, ["giving human friends a ride", "playing hide and seek"]);
 
-ellie.trumpet;
+ellie.trumpet();
+console.log(ellie.height);
+ellie.play();
