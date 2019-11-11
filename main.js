@@ -49,15 +49,14 @@ Elephant.prototype.play = function() {
 
 //closures
 
-function dinerBreakfast(newstr) {
-  var initBfastStr = "Scrambled eggs and bacon";
-
-  function addBfastStr() {
-    BfastStr = initBfastStr + " " + "and" + " " + newstr;
-    return BfastStr;
+function dinerBreakfast() {
+  let BfastStr = "Scrambled eggs and bacon";
+  console.log(BfastStr);
+  return function addBfastStr(newstr) {
+    BfastStr = BfastStr + " " + "and" + " " + newstr;
+    console.log(BfastStr);
   }
 
-  console.log(addBfastStr());
 }
 
 
@@ -72,4 +71,6 @@ ellie.trumpet();
 console.log(ellie.height);
 ellie.play();
 
-dinerBreakfast("hash browns");
+let bFastOrder = dinerBreakfast();
+bFastOrder("hash browns");
+bFastOrder("fruit");
