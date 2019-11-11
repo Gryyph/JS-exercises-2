@@ -40,14 +40,36 @@ Elephant.prototype.play = function() {
   };
 
 // invocation
-Elephant.paradehelper()  = function(elephant_object) {
+
+/*Elephant.paradehelper()  = function(elephant_object) {
   console.log(`${elephant_object.name} is in the parade!`);
 
 }
+*/
 
+//closures
+
+function dinerBreakfast(newstr) {
+  var initBfastStr = "Scrambled eggs and bacon";
+
+  function addBfastStr() {
+    BfastStr = initBfastStr + " " + "and" + " " + newstr;
+    return BfastStr;
+  }
+
+  console.log(addBfastStr());
+}
+
+
+
+
+
+//calling funcs
 
 let ellie = new Elephant("Ellie", 185, ["giving human friends a ride", "playing hide and seek"]);
 
 ellie.trumpet();
 console.log(ellie.height);
 ellie.play();
+
+dinerBreakfast("hash browns");
